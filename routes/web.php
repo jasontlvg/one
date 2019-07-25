@@ -14,6 +14,7 @@
 use App\User;
 use App\Author;
 use App\Book;
+use App\Chapter;
 
 Route::get('/', function () {
 
@@ -32,8 +33,18 @@ Route::get('/', function () {
 ////        return $book->chapters;
 //    }
 
+//    $books= Author::find(1)->books;
+//    $chapters=[];
+//    foreach($books as $book){
+//        array_push($chapters,$book->chapters);
+//    }
+//    return $chapters;
+//    return view('probe', compact('chapters'));
 
-    return view('probe', compact('authors'));
+    $chapters= Author::find(1)->chapters;
+    return $chapters;
+//    return view('probe', compact('chapters'));
+
 });
 
 Auth::routes();

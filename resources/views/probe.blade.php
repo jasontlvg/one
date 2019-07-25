@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-@foreach($authors as $b)
+@foreach($chapters as $b)
     <p>{{$b}}</p>
 @endforeach
 
